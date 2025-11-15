@@ -13,7 +13,12 @@ import os
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 # Em produção, defina as origens reais no .env
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='dolfidoc.com.br,www.dolfidoc.com.br,api.dolfidoc.com.br', cast=Csv())
+ALLOWED_HOSTS = config(
+    'ALLOWED_HOSTS',
+    default='dolfidoc.com.br,www.dolfidoc.com.br,api.dolfidoc.com.br,dolfidoc-main-dolfidoc-djangoo.babqvt.easypanel.host',
+    cast=Csv()
+)
+
 
 # ==============================================================
 #  DATABASE (PostgreSQL - Railway ou Render)
