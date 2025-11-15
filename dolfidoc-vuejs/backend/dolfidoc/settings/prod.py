@@ -40,8 +40,8 @@ DATABASES = {
 # ==============================================================
 
 SECURE_SSL_REDIRECT = False
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
 X_FRAME_OPTIONS = 'DENY'
@@ -100,5 +100,6 @@ CSRF_TRUSTED_ORIGINS = [
     "https://dolfidoc-main-dolfidoc-vue.babqvt.easypanel.host",
     "https://dolfidoc-main-dolfidoc-djangoo.babqvt.easypanel.host",
 ]
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 
