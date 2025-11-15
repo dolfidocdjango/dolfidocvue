@@ -47,9 +47,10 @@ X_FRAME_OPTIONS = 'DENY'
 
 CORS_ALLOWED_ORIGINS = config(
     'CORS_ALLOWED_ORIGINS',
-    default='https://dolfidoc.com.br,https://www.dolfidoc.com.br',
+    default="https://dolfidoc.com.br,https://www.dolfidoc.com.br,https://dolfidoc-main-dolfidoc-vue.babqvt.easypanel.host",
     cast=Csv()
 )
+
 
 # ==============================================================
 #  TIMEZONE / LINGUA
@@ -88,3 +89,11 @@ LOGGING = {
         'level': 'INFO',
     },
 }
+
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://dolfidoc-main-dolfidoc-vue.babqvt.easypanel.host",
+    "https://dolfidoc-main-dolfidoc-djangoo.babqvt.easypanel.host",
+]
+
+
