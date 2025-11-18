@@ -37,22 +37,6 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.CreateModel(
-            name='Cliente',
-            fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('nome', models.CharField(max_length=255)),
-                ('email', models.EmailField(max_length=254, unique=True)),
-                ('telefone', models.CharField(blank=True, max_length=20, null=True)),
-                ('data_criacao', models.DateTimeField(auto_now_add=True)),
-                ('ativo', models.BooleanField(default=True)),
-            ],
-            options={
-                'verbose_name': 'Cliente',
-                'verbose_name_plural': 'Clientes',
-                'ordering': ['-data_criacao'],
-            },
-        ),
-        migrations.CreateModel(
             name='Config',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),

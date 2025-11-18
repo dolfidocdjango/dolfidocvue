@@ -1,7 +1,7 @@
 # serializers.py
 
 from rest_framework import serializers
-from .models import Cardiologista, Medicos, Config, Cliente
+from .models import Cardiologista, Medicos, Config
 
 
 class CardiologistaSerializer(serializers.ModelSerializer):
@@ -108,11 +108,3 @@ class ConfigSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'email', 'feedback', 'comment']
 
 
-class ClienteSerializer(serializers.ModelSerializer):
-    """
-    Serializer para o modelo Cliente.
-    """
-    class Meta:
-        model = Cliente
-        fields = ['id', 'nome', 'email', 'telefone', 'data_criacao', 'ativo']
-        read_only_fields = ['data_criacao']
