@@ -49,15 +49,12 @@ INSTALLED_APPS = [
     # Local apps
     'dolfidoc.api',
     'dolfidoc.users',
-
-    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -171,12 +168,7 @@ SIMPLE_JWT = {
 
 CORS_ALLOWED_ORIGINS = config(
     'CORS_ALLOWED_ORIGINS',
-    default='http://localhost:5173,http://localhost:8080',"https://dolfidoc-main-dolfidoc-vue.babqvt.easypanel.host",
+    default='http://localhost:5173,http://localhost:8080',
     cast=lambda v: [s.strip() for s in v.split(',')]
 )
 CORS_ALLOW_CREDENTIALS = True
-
-CSRF_TRUSTED_ORIGINS = [
-    "https://dolfidoc-main-dolfidoc-vue.babqvt.easypanel.host",
-    "https://dolfidoc-main-dolfidoc-djangoo.babqvt.easypanel.host",
-]
